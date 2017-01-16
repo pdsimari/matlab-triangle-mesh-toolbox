@@ -3,13 +3,13 @@ function [h, k, k1, k2] = symbolicCurvature2D(fstring, X)
 % Patricio Simari
 % August 2012
 %
-% [h,k] = symbolicCurvature(fstring, X)
+% [h, k, k1, k2] = symbolicCurvature(fstring, X)
 %
-% Given a symbolic expression as a string in fstring, using symbolic
-% computing to compute the mean and Gaussian curvature at the domain points
-% given in X. In other words, h(i) and k(i) contain the mean and Gaussian 
-% curvature of the expression in fstring at point X(:,i). The function in
-% fstring should use 'x', 'y'.
+% Given a symbolic expression as a string in fstring, symbolic computing 
+% is used to compute the mean and Gaussian curvature at the domain points
+% given in X. The outputs h(i), k(i), k1(i), and k2(i) contain the mean and 
+% Gaussian curvature of the expression in fstring at point X(:,i). The 
+% function in fstring should use 'x', 'y' as variables.
 
 h = zeros(1,size(X,2));
 k = zeros(1,size(X,2));
